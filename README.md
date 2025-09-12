@@ -1,5 +1,5 @@
 My groupmembers are:
-- XXXX
+- Silas Revere
 - XXXX
 - XXXX
 - XXXX
