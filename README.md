@@ -5,7 +5,6 @@ My groupmembers are:
 - XXXX
 
 
------------------- Fill in some information about your project under this ------------------
 
 Project Logistics (Kinnect Group)
 
