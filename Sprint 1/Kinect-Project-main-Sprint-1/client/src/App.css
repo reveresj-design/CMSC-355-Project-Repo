@@ -1,0 +1,392 @@
+/* FileName: App.js */
+/* Description: handles color, font, and UI elements */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Various color and font presets */
+:root {
+ --background-color: #f0f2f5;
+ --surface-color: #ffffff;
+ --primary-color: #0d6efd;
+ --primary-gradient: linear-gradient(45deg, #0d6efd, #0dcaf0);
+--danger-color: #bd2131;
+--text-primary: #212529;
+ --text-secondary: #6c757d;
+ --border-color: #e9ecef;
+}
+body {
+ margin: 1;
+font-family: 'Poppins', sans-serif;
+ background-color: var(--background-color);
+ color: var(--text-primary);
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+.App {
+ text-align: center;
+}
+/* Navigation bar */
+.app-nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 40px;
+ height: 70px;
+ background-color: var(--surface-color);
+ box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+.nav-title {
+ font-size: 1.5rem;
+ font-weight: 700;
+ color: var(--primary-color);
+}
+.user-controls {
+ display: flex;
+ gap: 15px;
+}
+/* Main content */
+.app-main {
+ padding: 40px 20px;
+}
+.dashboard-container {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 30px;
+}
+.auth-container {
+ max-width: 500px;
+ margin: 40px auto;
+ padding: 30px;
+ background-color: var(--surface-color);
+ border-radius: 12px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/* Components */
+.feature-container {
+ flex: 1;
+ min-width: 450px;
+ max-width: 700px;
+ background-color: var(--surface-color);
+ border-radius: 12px;
+ padding: 24px 30px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ text-align: left;
+ border-top: 4px solid var(--primary-color);
+}
+.feature-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: baseline;
+ width: 100%;
+ margin-bottom: 20px;
+ border-bottom: 1px solid var(--border-color);
+ padding-bottom: 15px;
+}
+h1, h2, h4 {
+ color: var(--text-primary);
+ margin-top: 0;
+}
+h2 {
+ margin-bottom: 20px;
+}
+/* Various forms and inputs */
+form {
+ display: flex;
+ flex-direction: column;
+ gap: 5px;
+}
+input, label {
+ width: 95%;
+}
+input[type="text"], input[type="date"], input[type="time"], input[type="email"], input[type="password"] {
+ padding: 12px;
+ border: 1px solid var(--border-color);
+ border-radius: 6px;
+ font-size: 1rem;
+ font-family: 'Poppins', sans-serif;
+}
+input[type="text"]:focus, input[type="date"]:focus, input[type="time"]:focus {
+ outline: none;
+ border-color: var(--primary-color);
+ box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+label {
+ font-size: 0.8rem;
+ font-weight: 500;
+ color: var(--text-secondary);
+ margin-top: 10px;
+ margin-bottom: -10px;
+}
+/* Buttons */
+.user-controls button,
+.feature-container button,
+.modal button {
+ border: none;
+ border-radius: 6px;
+ padding: 10px 15px;
+ font-size: 0.9rem;
+ font-weight: 500;
+ cursor: pointer;
+ transition: all 0.2s ease;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+}
+.user-controls button,
+.feature-container button,
+.modal button,
+.auth-container button {
+ border: none;
+ border-radius: 6px;
+ padding: 10px 15px;
+ font-size: 0.9rem;
+ font-weight: 500;
+ cursor: pointer;
+ transition: all 0.2s ease;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+}
+.user-controls button:hover,
+.feature-container button:hover,
+.modal button:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.user-controls button:active,
+.feature-container button:active,
+.modal button:active {
+ transform: translateY(-1px);
+ box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+button[type="submit"], .feature-header button, .app-nav button {
+ background: var(--primary-gradient);
+ color: white;
+}
+.delete-button { background-color: var(--danger-color); color: white; }
+.edit-button { background-color: #6c757d; color: white; }
+button[type="button"] { background-color: #6c757d; color: white; }
+.administer-button { background-color: #198754; color: white; }
+/* Medication list */
+.medication-list h2 {
+ margin-top: 30px;
+}
+.medication-list ul {
+ list-style-type: none;
+ padding: 0;
+ margin: 0;
+}
+.medication-item {
+ border-bottom: 1px solid var(--border-color);
+ padding: 1px 1px;
+}
+.medication-item:last-child {
+ border-bottom: none;
+}
+.medication-info {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.button-group {
+ display: flex;
+ gap: 1px;
+}
+.button-group button {
+ min-width: 80px;
+}
+/* History log */
+.history-log {
+ margin-top: 20px;
+ border-top: 1px solid var(--border-color);
+ padding-top: 1px;
+ font-size: 0.85rem;
+ color: var(--text-secondary);
+}
+.history-log li {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 12px;
+ margin-bottom: 1px;
+ padding-left: 1px;
+}
+.history-log button {
+ padding: 5px 5px;
+ font-size: 0.8rem;
+ background-color: #6c757d;
+ color: white;
+ flex-shrink: 0;
+}
+/* Modal styles */
+.modal {
+ position: fixed;
+ z-index: 100;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0,0,0,0.5);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.modal-content {
+ background-color: var(--surface-color);
+ padding: 30px;
+ border-radius: 12px;
+ box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+ width: 10%;
+ max-width: 500px;
+ text-align: left;
+}
+/* Animation styles */
+.modal-enter {
+ opacity: 0;
+ transform: scale(0.9);
+}
+.modal-enter-active {
+ opacity: 1;
+ transform: scale(1);
+ transition: opacity 300ms, transform 300ms;
+}
+.modal-exit {
+ opacity: 1;
+ transform: scale(1);
+}
+.modal-exit-active {
+ opacity: 0;
+ transform: scale(0.9);
+ transition: opacity 300ms, transform 300ms;
+}
+/* Group info styles */
+.group-info-container {
+ max-width: 800px;
+ margin: 0 auto 30px auto;
+ padding: 20px;
+ background-color: var(--surface-color);
+ border-radius: 12px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ text-align: center;
+}
+.group-info-container h3 {
+ margin: 0 0 10px 0;
+}
+.group-info-container p {
+ margin: 0 0 10px 0;
+ color: var(--text-secondary);
+}
+.invite-code {
+ display: inline-block;
+ background-color: #e9ecef;
+ padding: 10px 20px;
+ border-radius: 6px;
+ font-weight: 600;
+ font-size: 1.2rem;
+ letter-spacing: 2px;
+ cursor: pointer;
+ transition: background-color 0.2s;
+}
+.invite-code:hover {
+ background-color: #dde2e6;
+}
+/* Group button handling */
+.group-buttons button {
+ background-color: var(--secondary-background);
+ color: var(--text-primary);
+ padding: 10px 15px;
+ border-radius: 10px;
+ border: 1px solid var(--border-color);
+ font-size: 1em;
+ cursor: pointer;
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+ white-space: nowrap;
+}
+.group-buttons button:hover {
+ background-color: var(--hover-background);
+ border-color: var(--primary-color);
+ color: var(--primary-color);
+}
+/* Delete button styles */
+.group-buttons .delete-button {
+ background-color: var(--red-button-background);
+ border-color: var(--red-button-border);
+ color: rgb(207, 111, 111);
+}
+.group-buttons .delete-button:hover {
+ background-color: var(--red-button-hover);
+ border-color: var(--red-button-hover);
+ color: rgba(85, 14, 14, 0.603);
+}
+.group-buttons .delete-button i {
+ color: rgba(126, 81, 81, 0.884);
+}
+/* Styles for the leave button */
+.group-buttons .edit-button i {
+ color: var(--text-primary);
+}
+.group-buttons .edit-button:hover i {
+color: var(--primary-color);
+}
+
+/* Group info card updates */
+
+.group-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.user-profile-info {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 15px;
+}
+
+.user-profile-info h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.user-profile-info p {
+  margin: 5px 0 0 0;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Styles for scrollable list/search bar */
+
+/* Making the list scrolalble */
+.medication-list ul {
+  max-height: 400px; 
+  overflow-y: auto;
+  padding-right: 15px; 
+}
+
+/* Styles for the new header */
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* Extra styling for medication log (adding border around each entry) */
+.medication-item {
+  border: 1px solid #ddd;      
+  padding: 16px;              
+  margin-bottom: 16px;         
+  border-radius: 8px;          
+  background-color: #f9f9f9;  
+}

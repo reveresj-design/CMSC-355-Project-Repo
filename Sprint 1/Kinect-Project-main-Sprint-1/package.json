@@ -1,0 +1,21 @@
+{
+  "name": "kinnect-backend",
+  "version": "1.0.0",
+  "description": "Backend server for the Kinnect application.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Silas Revere",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "mongoose": "^8.18.1",
+    "nanoid": "^5.1.6",
+    "react-transition-group": "^4.4.5"
+  }
+}
