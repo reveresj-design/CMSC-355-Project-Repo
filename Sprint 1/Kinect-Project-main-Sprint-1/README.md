@@ -15,3 +15,5 @@ Shared log of medication so that each relevant family member can mark if a medic
 Calendar for appointments/important events that family members can collaborate on, where appoints can be added and marked off according to what is needed. Additionally, appointment information such as the doctor's name, purpose and location of each appointment can be tracked here for greater convenience and streamlining. After each visit, a summary of what took place will be uploaded here for every family member to view.
 
 Vitals tracker that centralizes and tracks vitals data over time in order to track trends, which will be displayed in a chart.
+
+To run the application, in powershell/command prompt navigate to the project directory, and run the command 'npm start' to start the backend. Next, navigate to the 'client' folder in the project directory and run the same command to start the frontend (run 'npm install' if any libraries are missing).
