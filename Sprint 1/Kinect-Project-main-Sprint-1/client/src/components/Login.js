@@ -59,7 +59,7 @@ function Login({ onLogin }) {
         />
         <button type="submit">Login</button>
       </form>
-      {/* Renders the error message if one exists. */}
+      {/* Renders error message. */}
       {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>
   );

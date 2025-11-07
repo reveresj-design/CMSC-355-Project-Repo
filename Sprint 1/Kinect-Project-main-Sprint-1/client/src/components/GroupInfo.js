@@ -61,12 +61,12 @@ function GroupInfo({ user, group, onLeaveGroup }) {
   // Renders the UI for the component.
   return (
     <div className="group-info-container">
-      {/* Section to display the logged-in user's details. */}
+      {/* Displays the logged-in user's details. */}
       <div className="user-profile-info">
         <h4>Logged in as:</h4>
         <p>{user.username} ({user.email})</p>
       </div>
-      {/* Section to display shared group information and actions. */}
+      {/* Displays shared group information. */}
       <div className="group-details">
         <h3>{group.name}</h3>
         <div className="group-actions">
