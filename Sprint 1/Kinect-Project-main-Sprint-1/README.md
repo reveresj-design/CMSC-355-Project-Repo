@@ -4,6 +4,7 @@ Silas Revere
 XXXX
 XXXX
 XXXX
+
 Project Logistics (Kinnect Group)
 
 As we know, people do not stay young forever. Age effects all of us, but these effects are most often felt by the children of aging parents. As parents age, the children are often stretched thin trying to manage all the various medication schedules and doctor's appointments, and it becomes more and more difficult to keep track of everything that's going on. However, we are proposing a solution to this often overlooked issue, an application that will be called, “Kinnect”. Kinnect will work as a tool to centralize and streamline all of this different information in a way that is significantly easier to keep up with. It will provide a real time “hub” that trusted family members will be able to access. This way, every family member can be kept up to date with the latest scheduling and medication information so that everything stays consistent.
@@ -16,4 +17,4 @@ Calendar for appointments/important events that family members can collaborate o
 
 Vitals tracker that centralizes and tracks vitals data over time in order to track trends, which will be displayed in a chart.
 
-To run the application, in powershell/command prompt navigate to the project directory, and run the command 'npm start' to start the backend. Next, navigate to the 'client' folder in the project directory and run the same command to start the frontend (run 'npm install' if any libraries are missing).
+To run the application, in powershell/command prompt navigate to the project directory, and run the command 'npm start' to start the backend. Next, navigate to the 'client' folder in the project directory and run the same command to start the frontend (run 'npm install' in the front and backend if any libraries are missing).
