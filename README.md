@@ -20,4 +20,4 @@ Calendar for appointments/important events that family members can collaborate o
 
 Vitals tracker that centralizes and tracks vitals data over time in order to track trends, which will be displayed in a chart.
 
-To run the application, in powershell/command prompt navigate to the project directory, and run the command 'npm start' to start the backend. Next, navigate to the 'client' folder in the project directory and run the same command to start the frontend (run 'npm install' if any libraries are missing).
+To run the application, in powershell/command prompt navigate to the project directory, and run the command 'npm start' to start the backend. Next, navigate to the 'client' folder in the project directory and run the same command to start the frontend (run 'npm install' in the front and backend if any libraries are missing).
